@@ -1,13 +1,13 @@
 with open('input.txt') as file:
     data = file.read().strip()
 
-def find_digit(input_string, mode):
-    if mode == 1:
-        for char in input_string:
+def find_digit(s, mode='forward'):
+    if mode == 'forward':
+        for char in s:
             if char.isdigit():
                 return int(char)
-    elif mode == -1:
-        for char in reversed(input_string):
+    else:
+        for char in reversed(s):
             if char.isdigit():
                 return int(char)
     return None  # Return None if no digit is found
@@ -59,8 +59,8 @@ def find_first_number(s, mode='forward'):
 
 total_1 = 0
 for line in data.split("\n"):
-    forward_digit = find_digit(line, 1)
-    backward_digit = find_digit(line, -1)
+    forward_digit = find_digit(line, "forward")
+    backward_digit = find_digit(line, "backward")
     total_1 += 10 * forward_digit + backward_digit
 
 print(total_1) # Output: 55488
