@@ -63,7 +63,7 @@ for line in data.split("\n"):
     backward_digit = find_digit(line, -1)
     total_1 += 10 * forward_digit + backward_digit
 
-print(total_1)
+print(total_1) # Output: 55488
 
 # Part 2
 
@@ -73,4 +73,4 @@ for line in data.split("\n"):
     backward_digit = find_first_number(line, "backward")
     total_2 += 10 * forward_digit + backward_digit
 
-print(total_2)
+print(total_2) # Output: 55614
