@@ -12,10 +12,11 @@ def product_of_differences_in_range(start, end, target):
           product *= difference
   return product
 
+# Part 1
 data = "[49, 356], [87, 1378], [78, 1502], [95, 1882]"
 pairs = [pair.strip('[]').split(', ') for pair in data.split('], [')]
-
 product = 1
+
 for pair in pairs:
   time = int(pair[0])
   distance = int(pair[1])
@@ -23,3 +24,7 @@ for pair in pairs:
   product *= difference
 
 print(f"The product of differences is {product}")
+
+# Part2
+difference = find_difference_to_exceed_target(49877895, 356137815021882)
+print(f"The result is {difference}")
