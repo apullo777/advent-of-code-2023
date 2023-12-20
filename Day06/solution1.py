@@ -1,3 +1,9 @@
+
+# By identifying the point where the product (x * y) starts to exceed the target
+# for the smallest possible x, you can infer that all pairs (x, y) with x <= that
+# value will also make the product exceed the target without the need for actual
+# product calculations.
+
 def find_difference_to_exceed_target(number, target):
   for i in range(1, number):
     if i * (number - i) > target:
